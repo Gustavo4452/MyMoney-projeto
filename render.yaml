@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: mymoney-projeto
+    runtime: node
+    plan: starter
+    buildCommand: npm test
+    startCommand: npm start
+    healthCheckPath: /health
+    disk:
+      name: mymoney-data
+      mountPath: /var/data
+      sizeGB: 1
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATABASE_PATH
+        value: /var/data/mymoney.sqlite
