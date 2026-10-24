@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minha conta | MyMoney</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container nav">
+        <a class="brand" href="/">
+          <span class="brand-mark">M</span><span>MyMoney</span>
+        </a>
+        <div class="account-actions">
+          <a class="ghost-btn" href="/">Voltar ao painel</a>
+          <button class="ghost-btn" id="logoutButton" type="button">Sair</button>
+        </div>
+      </div>
+    </header>
+    <main class="container account-page">
+      <div class="section-title">
+        <span class="label">Conta autenticada</span>
+        <h1>Meu perfil</h1>
+        <p>Altere seus dados pessoais. Para mudar a senha, confirme a senha atual.</p>
+      </div>
+      <form id="profileForm" class="panel account-form">
+        <label class="form-field">
+          <span>Nome</span>
+          <input id="profileName" name="name" type="text" minlength="2" maxlength="100" autocomplete="name" required />
+        </label>
+        <label class="form-field">
+          <span>E-mail</span>
+          <input id="profileEmail" name="email" type="email" maxlength="254" autocomplete="email" required />
+        </label>
+        <div class="form-divider"></div>
+        <label class="form-field">
+          <span>Senha atual <small>(necessária para alterar a senha)</small></span>
+          <input name="currentPassword" type="password" autocomplete="current-password" />
+        </label>
+        <label class="form-field">
+          <span>Nova senha</span>
+          <input name="newPassword" type="password" autocomplete="new-password" minlength="12" maxlength="128" />
+          <small>Deixe em branco para manter a senha atual. Se preencher, use pelo menos 12 caracteres.</small>
+        </label>
+        <p id="profileMessage" class="form-message" aria-live="polite"></p>
+        <button class="primary-btn form-submit" type="submit">Salvar alterações</button>
+      </form>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <p>MyMoney · Criado por Gustavo · 24/10/2026</p>
+        <a href="https://github.com/Gustavo4452" target="_blank" rel="noopener noreferrer">GitHub de Gustavo</a>
+        <a href="https://www.linkedin.com/in/gustavo-rodrigues-b79583197/" target="_blank" rel="noopener noreferrer">LinkedIn de Gustavo</a>
+      </div>
+    </footer>
+    <script src="/profile.js"></script>
+  </body>
+</html>

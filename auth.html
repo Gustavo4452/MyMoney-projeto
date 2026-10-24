@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Acessar | MyMoney</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body class="auth-page">
+    <main class="auth-layout">
+      <section class="auth-intro">
+        <a class="brand" href="/auth.html">
+          <span class="brand-mark">M</span><span>MyMoney</span>
+        </a>
+        <span class="eyebrow">Seu espaço financeiro</span>
+        <h1>Um lugar só seu para cuidar do seu dinheiro.</h1>
+        <p>Acesse seu painel privado para acompanhar seu perfil financeiro e estudar ideias de investimento.</p>
+      </section>
+      <section class="auth-card panel">
+        <div class="auth-tabs" role="tablist" aria-label="Acesso à conta">
+          <button class="auth-tab active" id="loginTab" type="button" role="tab" aria-selected="true">Entrar</button>
+          <button class="auth-tab" id="registerTab" type="button" role="tab" aria-selected="false">Criar conta</button>
+        </div>
+        <form id="loginForm" class="auth-form">
+          <div class="section-title">
+            <span class="label">Bem-vindo de volta</span>
+            <h2>Entre na sua conta</h2>
+          </div>
+          <label class="form-field">
+            <span>E-mail</span>
+            <input name="email" type="email" autocomplete="email" maxlength="254" required />
+          </label>
+          <label class="form-field">
+            <span>Senha</span>
+            <input name="password" type="password" autocomplete="current-password" required />
+          </label>
+          <p class="form-message" id="loginMessage" aria-live="polite"></p>
+          <button class="primary-btn form-submit" type="submit">Entrar</button>
+        </form>
+        <form id="registerForm" class="auth-form" hidden>
+          <div class="section-title">
+            <span class="label">Comece por aqui</span>
+            <h2>Crie sua conta</h2>
+          </div>
+          <label class="form-field">
+            <span>Nome</span>
+            <input name="name" type="text" autocomplete="name" minlength="2" maxlength="100" required />
+          </label>
+          <label class="form-field">
+            <span>E-mail</span>
+            <input name="email" type="email" autocomplete="email" maxlength="254" required />
+          </label>
+          <label class="form-field">
+            <span>Senha</span>
+            <input name="password" type="password" autocomplete="new-password" minlength="12" maxlength="128" required />
+            <small>Use pelo menos 12 caracteres.</small>
+          </label>
+          <p class="form-message" id="registerMessage" aria-live="polite"></p>
+          <button class="primary-btn form-submit" type="submit">Criar conta</button>
+        </form>
+        <p class="privacy-note">Seus dados são vinculados à sua conta e protegidos por autenticação.</p>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <p>MyMoney · Criado por Gustavo · 24/10/2026</p>
+        <a href="https://github.com/Gustavo4452" target="_blank" rel="noopener noreferrer">GitHub de Gustavo</a>
+        <a href="https://www.linkedin.com/in/gustavo-rodrigues-b79583197/" target="_blank" rel="noopener noreferrer">LinkedIn de Gustavo</a>
+      </div>
+    </footer>
+    <script src="/auth.js"></script>
+  </body>
+</html>

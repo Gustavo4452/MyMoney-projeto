@@ -1,0 +1,13 @@
+{
+  "name": "mymoney",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Aplicativo local de controle financeiro com autenticação.",
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test"
+  }
+}
